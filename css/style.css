@@ -43,6 +43,31 @@ h1, h2, h3, h4{
 .main-content{
     background-color: orange;
     height: 60vh;
+    display: flex;
+    padding: 30px;
+    box-sizing: border-box;
+    /*justify-content: space-between;*/
+    /*flex-direction 이놈이 콘텐츠를 가로방향 세로방향
+    배치를 정해준다 디폴트는 row*/
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.group{
+    background-color: pink;
+}
+
+.group1{
+    width: 250px;
+}
+
+.group2{
+    width: 380px;
+}
+
+.group3{
+    width: 190px;
+    /*order: -1;*/
 }
 
 .slogan{
