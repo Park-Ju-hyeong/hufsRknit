@@ -1,7 +1,36 @@
 @charset "utf-8";
-body{
-    background: white
+/* 웹폰트 선언 */
+@font-face {
+    font-family: 'webcafeIcon';
+    font-weight:400;
+    src: url('font/webcafeIcon.eot');
+    src: url('font/webcafeIcon.eot?#iefix') format('embedded-opentype'),
+         url('font/webcafeIcon.woff') format('woff'),
+         url('font/webcafeIcon.ttf') format('truetype'),
+         url('font/webcafeIcon.svg#webcaferegular') format('svg');
 }
+@font-face {
+    font-family: 'Noto Sans Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'),
+    url('font/eot/NotoSansKR-Regular-Hestia.eot'),
+    url('font/eot/NotoSansKR-Regular-Hestia.eot?#iefix') format('embedded-opentype'),
+    url('font/woff/NotoSansKR-Regular-Hestia.woff') format('woff'),
+    url('font/otf/NotoSansKR-Regular-Hestia.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+    url('font/eot/NotoSansKR-Bold-Hestia.eot'),
+    url('font/eot/NotoSansKR-Bold-Hestia.eot?#iefix') format('embedded-opentype'),
+    url('font/woff/NotoSansKR-Bold-Hestia.woff') format('woff'),
+    url('font/otf/NotoSansKR-Bold-Hestia.otf') format('opentype');
+}
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
 /* 요소의 여백 초기화 */
 /*html, body, h1, h2, h3, h4, p{
     margin: 0;
@@ -12,6 +41,13 @@ body{
     font-size: 1em;
     font-weight: normal;
 }*/
+
+/* 기본스타일 */
+body{
+    background: white;
+    font-family: 'Noto Sans Regular', sans-serif;
+    font-family: "돋움", Dotum;
+}
 
 /* 레이아웃 */
 /* #=id  .=class  */
@@ -24,7 +60,8 @@ body{
     /* 위 코드랑 아래코드랑 같음 단축표기법임 */
 
     background: url(images/bg_flower.png) no-repeat 50% 0, linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%) repeat 0 0;
-
+    /*내가 찾던 바로 그것!*/
+    background-attachment: fixed;
     height: 100vh;
 }
 
@@ -49,6 +86,7 @@ body{
 }
 
 .main-content{
+    font-family: 'Noto Sans', sans-serif;
     background-color: white;
     min-height: 400px;
     display: flex;
