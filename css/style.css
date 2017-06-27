@@ -1,23 +1,31 @@
 @charset "utf-8";
 body{
-    background: lightblue;
+    background: white
 }
 /* 요소의 여백 초기화 */
-html, body, h1, h2, h3, h4, p{
+/*html, body, h1, h2, h3, h4, p{
     margin: 0;
     padding: 0;
-}
+}*/
 /* 제목크기 초기화 */
-h1, h2, h3, h4{
+/*h1, h2, h3, h4{
     font-size: 1em;
     font-weight: normal;
-}
+}*/
 
 /* 레이아웃 */
 /* #=id  .=class  */
 .wrapper{
-    background-color: salmon;
-    height: 50vh;
+    /*background-image: url(images/bg_flower.png), linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: 50% 0 0 0;*/
+
+    /*repeat은 배경이미지 반복하기*/
+    /* 위 코드랑 아래코드랑 같음 단축표기법임 */
+
+    background: url(images/bg_flower.png) no-repeat 50% 0, linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%) repeat 0 0;
+
+    height: 100vh;
 }
 
 .header, .visual, .main-content, .slogan, .footer{
@@ -26,23 +34,23 @@ h1, h2, h3, h4{
 }
 .header{
     /*box-sizing: border-box;*/
-    background-color: gray;
+    background-color: #ffffff;
     border: 5px solid white;
     padding: 20px;
     /* 앞 0은 위 아래 , 뒤 50은 양 옆 */
     /*margin: 0 50px;*/
     /* auto 는 남은 면적 계산해서 해줌 */
-    height: 10vh;
+    height: 115px;
+    border-radius: 0 0 15px 15px;
 }
 
 .visual{
-    background-color: red;
-    height: 10vh;
+    height: 120px;
 }
 
 .main-content{
-    background-color: orange;
-    height: 60vh;
+    background-color: white;
+    min-height: 400px;
     display: flex;
     padding: 30px;
     box-sizing: border-box;
@@ -51,32 +59,35 @@ h1, h2, h3, h4{
     배치를 정해준다 디폴트는 row*/
     flex-direction: row;
     justify-content: space-between;
+    border-radius: 15px 15px 0 0;
 }
 
 .group{
-    background-color: pink;
+    /*background-color: pink;*/
 }
 
 .group1{
     width: 250px;
+    background: linear-gradient(0deg, hotpink, yellow); 
 }
 
 .group2{
     width: 380px;
+    background: linear-gradient(45deg, hotpink, yellow); 
 }
 
 .group3{
     width: 190px;
+    background: linear-gradient(123deg, hotpink, yellow); 
     /*order: -1;*/
 }
-
 .slogan{
-    background-color: yellow;
+    background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
     height: 10vh;
 }
 
 .footer{
 
-    background-color: blue;
+    background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
     height: 10vh;
 }
