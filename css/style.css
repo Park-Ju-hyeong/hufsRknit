@@ -122,7 +122,7 @@ a {
     /* back to top 하고 싶다면 position: fixed;*/
     position: absolute;
     top: 120px;
-    left: 60px;
+    left: 30px;
 }
 
 
@@ -155,7 +155,7 @@ a {
 
 .info-menu a {
     padding: 10px;
-    background: white;
+    background: #007042;
     /*display: inline-block;*/
 }
 
@@ -171,6 +171,46 @@ a {
     content: " # "
 }
 
+
+/* 메인 메뉴 */
+
+.main-menu {
+    background: linear-gradient(to bottom, #FFFFFF 0%, #F0ECE9 50%, #FFFFFF 100%);
+    /* 메뉴들 점 빼기 */
+    list-style-type: none;
+    border-top: 2px solid #181818;
+    /* 모서리 둥글게둥글게 */
+    border-radius: 0 0 10px 10px;
+    padding-left: 225px;
+    height: 53px;
+}
+
+.main-menu>li {
+    float: left;
+}
+
+
+/* 하위 ul안에있는 a에 영향을 주지 않기 위해 li 에 있는 a만 
+선택할 수 있게 하위관계를 명확히 함 */
+
+.main-menu>li>a {
+    font-size: 1.6rem;
+    font-size: "Noto Sans Bold";
+    color: rgba(0, 0, 0, 0.9);
+    padding: 14px 25.2px;
+    /*background: red;*/
+    display: block;
+    border-left: 2px solid rgba(255, 255, 255, 0.9)
+}
+
+.main-menu ul {
+    list-style-type: none;
+    background: #007042;
+    /* 인덱스 순서대로 출력됨 */
+    position: absolute;
+    display: none;
+}
+
 .visual {
     font-family: 'Noto Sans', sans-serif;
     height: 120px;
@@ -178,7 +218,7 @@ a {
 
 .main-content {
     font-family: 'Noto Sans Bold';
-    background-color: white;
+    background-color: #007042;
     min-height: 400px;
     display: flex;
     padding: 30px;
@@ -197,17 +237,17 @@ a {
 
 .group1 {
     width: 250px;
-    background: linear-gradient(0deg, hotpink, yellow);
+    background: linear-gradient(0deg, #007042, #FFFFFF);
 }
 
 .group2 {
     width: 380px;
-    background: linear-gradient(45deg, hotpink, yellow);
+    background: linear-gradient(45deg, #007042, #FFFFFF);
 }
 
 .group3 {
     width: 190px;
-    background: linear-gradient(123deg, hotpink, yellow);
+    background: linear-gradient(123deg, #007042, #FFFFFF);
     /*order: -1;*/
 }
 
