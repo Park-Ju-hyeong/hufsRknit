@@ -63,31 +63,50 @@ body {
     background-position: 50% 0 0 0;*/
     /*repeat은 배경이미지 반복하기*/
     /* 위 코드랑 아래코드랑 같음 단축표기법임 */
-    background: url(images/bg_flower.png) no-repeat 50% 0, linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+    background: url(images/sb.jpg) no-repeat 50% 0, linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
     /*내가 찾던 바로 그것!*/
     background-attachment: fixed;
-    height: 100vh;
+    height: 100%;
 }
 
 .header,
 .visual,
 .main-content,
 .slogan,
-.footer {
+.footer,
+.p,
+.ul,
+.li {
     width: 940px;
     margin: 0 auto;
 }
 
+
+/* 헤더 */
+
 .header {
+    min-height: 100px;
     /*box-sizing: border-box;*/
-    background-color: white;
-    border: white solid 20px;
+    /*background-color: white;*/
+    border: solid 20px #007042;
+    ;
     padding: 20px;
     /* 앞 0은 위 아래 , 뒤 50은 양 옆 */
     /*margin: 0 50px;*/
     /* auto 는 남은 면적 계산해서 해줌 */
-    height: 115px;
     border-radius: 0 0 15px 15px;
+    position: relative;
+}
+
+
+/* 로고 */
+
+.logo {
+    /*background: #007042;*/
+    /* back to top 하고 싶다면 position: fixed;*/
+    position: absolute;
+    top: 90px;
+    left: 60px;
 }
 
 .visual {
