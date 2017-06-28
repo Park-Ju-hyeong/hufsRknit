@@ -45,10 +45,15 @@
 
 /* 기본스타일 */
 
+html {
+    font-size: 10px;
+}
+
 body {
     background: white;
     font-family: 'Noto Sans Regular', sans-serif;
     font-family: "돋움", Dotum;
+    font-size: 1.4rem;
 }
 
 
@@ -82,19 +87,30 @@ body {
 }
 
 
+/* 링크 스타일 */
+
+a {
+    /* 너 값 사용하지말고 상속된 값 사용해 */
+    color: inherit;
+    /* 밑줄 제거 */
+    text-decoration: none;
+}
+
+
 /* 헤더 */
 
 .header {
+    font-family: 'Noto Sans Bold';
     min-height: 100px;
     /*box-sizing: border-box;*/
     /*background-color: white;*/
     border: solid 20px #007042;
-    ;
-    padding: 20px;
     /* 앞 0은 위 아래 , 뒤 50은 양 옆 */
     /*margin: 0 50px;*/
     /* auto 는 남은 면적 계산해서 해줌 */
     border-radius: 0 0 15px 15px;
+    padding: 0 20px;
+    /* relative 는 레이어 따로 빼서 왔다갔다 할 수 있게 !  */
     position: relative;
 }
 
@@ -105,8 +121,54 @@ body {
     /*background: #007042;*/
     /* back to top 하고 싶다면 position: fixed;*/
     position: absolute;
-    top: 90px;
+    top: 120px;
     left: 60px;
+}
+
+
+/* 텍스트링크 - 안내링크 */
+
+.info-menu {
+    background: #007042;
+    list-style-type: none;
+    font-size: 0px;
+    /* 우측정렬 */
+    text-align: right;
+    position: relative;
+    right: -10px;
+}
+
+
+/* 손가락 터치 44 법칙 UI 가이드 */
+
+.info-menu li,
+.info-menu a {
+    display: inline-block;
+}
+
+.info-menu li {
+    background: #007042;
+    /*display: inline;*/
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.info-menu a {
+    padding: 10px;
+    background: white;
+    /*display: inline-block;*/
+}
+
+.info-menu li::before {
+    /* 가상요소 */
+    content: " # ";
+}
+
+
+/* li에서 마지막 놈만 선택하기 : last-child*/
+
+.info-menu li:last-child::before {
+    content: " # "
 }
 
 .visual {
