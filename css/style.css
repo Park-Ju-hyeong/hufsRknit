@@ -27,11 +27,16 @@
 
 /* 요소의 여백 초기화 */
 
-
-/*html, body, h1, h2, h3, h4, p{
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+p {
     margin: 0;
     padding: 0;
-}*/
+}
 
 
 /* 제목크기 초기화 */
@@ -104,7 +109,8 @@ a {
     min-height: 100px;
     /*box-sizing: border-box;*/
     /*background-color: white;*/
-    border: solid 20px #007042;
+    /*border: solid 20px #007042;*/
+    border-left: solid 20px #007042;
     /* 앞 0은 위 아래 , 뒤 50은 양 옆 */
     /*margin: 0 50px;*/
     /* auto 는 남은 면적 계산해서 해줌 */
@@ -121,7 +127,7 @@ a {
     /*background: #007042;*/
     /* back to top 하고 싶다면 position: fixed;*/
     position: absolute;
-    top: 120px;
+    top: 102px;
     left: 30px;
 }
 
@@ -195,12 +201,29 @@ a {
 
 .main-menu>li>a {
     font-size: 1.6rem;
-    font-size: "Noto Sans Bold";
+    font-family: "Noto Sans Bold";
     color: rgba(0, 0, 0, 0.9);
     padding: 14px 25.2px;
     /*background: red;*/
     display: block;
-    border-left: 2px solid rgba(255, 255, 255, 0.9)
+    border-left: 2px solid rgba(255, 255, 255, 0.9);
+    /* 글자 그림자 주기 */
+    /*text-shadow: 0.5px 0.5px 0 #007042, -0.5px 0.5px 0 #007042, 0.5px -0.5px 0 #007042, -0.5px -0.5px 0 #007042;*/
+}
+
+
+/* 마우스 올리면 바뀌기 */
+
+.main-menu>li>a:hover {
+    color: #007042;
+    /* 박스에 밑줄 귿기 */
+    /*border-bottom: 2px solid #181818;*/
+}
+
+.main-menu>li>a:hover::after {
+    content: "";
+    display: block;
+    border-top: 2px solid #181818;
 }
 
 .main-menu ul {
@@ -208,6 +231,30 @@ a {
     background: #007042;
     /* 인덱스 순서대로 출력됨 */
     position: absolute;
+    /*display: none;*/
+}
+
+.about-html {
+    display: block;
+}
+
+.about-css {
+    display: none;
+}
+
+.web-standard {
+    display: none;
+}
+
+.web-accessibility {
+    display: none;
+}
+
+.qna {
+    display: none;
+}
+
+.archive {
     display: none;
 }
 
@@ -218,7 +265,7 @@ a {
 
 .main-content {
     font-family: 'Noto Sans Bold';
-    background-color: #007042;
+    /*background-color: #007042;*/
     min-height: 400px;
     display: flex;
     padding: 30px;
@@ -237,17 +284,17 @@ a {
 
 .group1 {
     width: 250px;
-    background: linear-gradient(0deg, #007042, #FFFFFF);
+    background: linear-gradient(0deg, rgba(0, 112, 66, 0.5), rgba(255, 255, 255, 0.2));
 }
 
 .group2 {
     width: 380px;
-    background: linear-gradient(45deg, #007042, #FFFFFF);
+    background: linear-gradient(45deg, rgba(0, 112, 66, 0.5), rgba(255, 255, 255, 0.2));
 }
 
 .group3 {
     width: 190px;
-    background: linear-gradient(123deg, #007042, #FFFFFF);
+    background: linear-gradient(123deg, rgba(0, 112, 66, 0.5), rgba(255, 255, 255, 0.2));
     /*order: -1;*/
 }
 
