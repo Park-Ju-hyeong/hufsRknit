@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>float 속성 익히기</title>
+    <style>
+        .box {
+            background: #00BD39;
+            width: 500px;
+            /* 넘치는거 숨기세요 */
+            /*overflow: hidden;*/
+        }
+        /*float 이슈를 해결하기 위한 가상요소 선택자*/
+        
+        .box::after {
+            content: "";
+            /*background: red;*/
+            /*display: block;*/
+            /*clear: both;*/
+        }
+        
+        .box img {
+            float: right;
+            /*position: relative;*/
+            /*right: -50px;*/
+        }
+        
+        .note {
+            background: #007042;
+            /* clear는 강제로 마진을 추가함 */
+            clear: both;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="../images/news.gif" alt=""> 기아타이거즈 2018신인 1차 지명 포수 한준수 선수 26일 신인 1차 포수 한준수 지명
+    </div>
+    <div class="note">
+        기아타이거즈 2018신인 1차 지명 포수 한준수 선수 26일 신인 1차 포수 한준수 지명 “공수 양면 수준급 기량 갖춘 포수” 기아타이거즈가 26일 2018년 신인 1차 지명선수로 광주 동성고 포수...
+    </div>
+</body>
+
+</html>
