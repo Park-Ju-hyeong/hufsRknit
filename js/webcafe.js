@@ -1,3 +1,4 @@
+// 서브메뉴 제어를 위한 스크립트 
 $(function() {
     //if 구문처럼
     $(".main-menu>li").hover(
