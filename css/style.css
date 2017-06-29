@@ -106,7 +106,7 @@ a {
 
 .header {
     font-family: 'Noto Sans Bold';
-    min-height: 100px;
+    /*min-height: 100px;*/
     /*box-sizing: border-box;*/
     /*background-color: white;*/
     /*border: solid 20px #007042;*/
@@ -118,6 +118,7 @@ a {
     padding: 0 20px;
     /* relative 는 레이어 따로 빼서 왔다갔다 할 수 있게 !  */
     position: relative;
+    padding: 0 30px 40px 30px;
 }
 
 
@@ -201,7 +202,7 @@ a {
 /* 하위 ul안에있는 a에 영향을 주지 않기 위해 li 에 있는 a만 
 선택할 수 있게 하위관계를 명확히 함 */
 
-.main-menu>li>a {
+.main-menu>li>span {
     font-size: 1.6rem;
     font-family: "Noto Sans Bold";
     color: rgba(0, 0, 0, 0.9);
@@ -216,13 +217,17 @@ a {
 
 /* 마우스 올리면 바뀌기 */
 
-.main-menu>li>a:hover {
+.main-menu>li>span:hover,
+.main-menu>li>span:focus {
     color: #007042;
+    /**/
+    outline: 0;
     /* 박스에 밑줄 귿기 */
     /*border-bottom: 2px solid #181818;*/
 }
 
-.main-menu>li>a:hover::after {
+.main-menu>li>span:hover::after,
+.main-menu>li>span:focus::after {
     content: "";
     display: block;
     border-top: 2px solid #181818;
@@ -230,7 +235,7 @@ a {
 
 .main-menu ul {
     list-style-type: none;
-    background: #007042;
+    /*background: #007042;*/
     /* 인덱스 순서대로 출력됨 */
     position: absolute;
     /*display: none;*/
@@ -257,8 +262,14 @@ a {
     top: 2px;
 }
 
-.about-html {
+.main-menu ul a {
+    padding: 8px 15px 7px 0;
+    /*background: orange;*/
     display: block;
+}
+
+.about-html {
+    display: none;
 }
 
 .about-css {
@@ -271,14 +282,17 @@ a {
 
 .web-accessibility {
     display: none;
+    left: -150px;
 }
 
 .qna {
     display: none;
+    left: -210px;
 }
 
 .archive {
     display: none;
+    right: 0px;
 }
 
 .visual {
