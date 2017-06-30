@@ -5,24 +5,42 @@
     <meta charset="UTF-8">
     <title>텍스트 애니메이션</title>
     <style>
-        @keyframes keyframes {
-            0% {
-                width: 0;
-            }
-            /*100% {}*/
+        body {
+            margin: 50px;
+            background: silver;
+            font-family: sans-serif;
         }
         
-        .text {
+        h1 {
+            text-align: center;
+            color: red;
+            margin-bottom: 50px;
+        }
+        
+        p {
+            color: green;
+            font-size: 40px;
+            font-weight: bold;
+            /*background: yellowgreen;*/
+            animation: text-writing 5s infinite alternate;
+            white-space: nowrap;
             overflow: hidden;
-            width: 30em;
-            animation: keyframes 5s steps(500) infinite;
+        }
+        
+        @keyframes text-writing {
+            0% {
+                width: 0px;
+            }
+            100% {
+                width: 100%;
+            }
         }
     </style>
 </head>
 
 <body>
     <h1>Text Writing Animation</h1>
-    <p class="text">커피를 너무 많이 마셨나봐요 심장이 막 두근대고 잠잘 수가 없어요</p>
+    <p class="text">커피를 너무 많이 마셨나봐요 심장이 막 두근대고 잠잘 수가 없어요 한참 뒤에 별빛이 생기면</p>
     <p class="text-box">커피박스</p>
 </body>
 

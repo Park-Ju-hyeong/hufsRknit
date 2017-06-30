@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 50px;
+            position: relative;
+            top: 100px;
+            left: 500px;
+        }
+        
+        .container {
+            border: 2px solid black;
+            width: 1000px;
+            height: 500px;
+            margin: 50px auto;
+            perspective: 500px;
+            overflow: hidden;
+        }
+        
+        .box {
+            margin: 20px;
+            float: left;
+            width: 200px;
+            height: 200px;
+            background: red;
+            transform: perspective(1000px) rotateY(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>MS office</h1>
+    <div class="container">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+</body>
+
+</html>
