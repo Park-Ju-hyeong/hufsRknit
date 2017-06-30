@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 50px 150px;
+        }
+        
+        .btn-cube {
+            margin-bottom: 100px;
+        }
+        
+        .container {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            perspective: 1000px;
+        }
+        
+        .cube {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateZ(100px);
+            transform-style: preserve-3d;
+            transform-origin: 50% 50%;
+            transition: transform 1s;
+        }
+        
+        .backface div {
+            backface-visibility: hidden;
+        }
+        
+        .cube div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /*border: 2px solid #000;*/
+            color: #fff;
+            font-size: 60px;
+            text-align: center;
+            line-height: 200px;
+        }
+        
+        .show-front {
+            transform: rotateX(0deg) translateZ(-100px);
+        }
+        
+        .front {
+            background: hsla(0, 100%, 50%, 0.5);
+            transform: rotateX(0deg) translateZ(100px);
+        }
+        
+        .show-back {
+            transform: rotateX(-180deg) translateZ(-100px);
+        }
+        
+        .back {
+            background: hsla(60, 100%, 50%, 0.5);
+            transform: rotateX(180deg) translateZ(100px);
+        }
+        
+        .show-left {
+            transform: rotateY(90deg) translateZ(-100px);
+        }
+        
+        .left {
+            background: hsla(120, 100%, 50%, 0.5);
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        
+        .show-right {
+            transform: rotateY(-90deg) translateZ(-100px);
+        }
+        
+        .right {
+            background: hsla(180, 100%, 50%, 0.5);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        
+        .show-top {
+            transform: rotateX(-90deg) translateZ(-100px);
+        }
+        
+        .top {
+            background: hsla(240, 100%, 50%, 0.5);
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        
+        .show-bottom {
+            transform: rotateX(90deg) translateZ(-100px);
+        }
+        
+        .bottom {
+            background: hsla(300, 100%, 50%, 0.5);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn-cube">
+        <button type="button" class="btn-front">1번 큐브 보기</button>
+        <button type="button" class="btn-back">2번 큐브 보기</button>
+        <button type="button" class="btn-left">3번 큐브 보기</button>
+        <button type="button" class="btn-right">4번 큐브 보기</button>
+        <button type="button" class="btn-top">5번 큐브 보기</button>
+        <button type="button" class="btn-bottom">6번 큐브 보기</button>
+        <button type="button" class="btn-backface">뒷면 보기/감추기</button>
+    </div>
+    <div class="container">
+        <div class="cube">
+            <div class="front">1</div>
+            <div class="back">2</div>
+            <div class="left">3</div>
+            <div class="right">4</div>
+            <div class="top">5</div>
+            <div class="bottom">6</div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            $(".btn-front").on("click", function() {
+                $(".cube").removeAttr("class").addClass("cube show-front");
+            });
+            $(".btn-back").on("click", function() {
+                $(".cube").removeAttr("class").addClass("cube show-back");
+            });
+            $(".btn-left").on("click", function() {
+                $(".cube").removeAttr("class").addClass("cube show-left");
+            });
+            $(".btn-right").on("click", function() {
+                $(".cube").removeAttr("class").addClass("cube show-right");
+            });
+            $(".btn-top").on("click", function() {
+                $(".cube").removeAttr("class").addClass("cube show-top");
+            });
+            $(".btn-bottom").on("click", function() {
+                $(".cube").removeAttr("class").addClass("cube show-bottom");
+            });
+            $(".btn-backface").on("click", function() {
+                $(".container").toggleClass("backface");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

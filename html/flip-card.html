@@ -10,6 +10,7 @@
             height: 260px;
             position: relative;
             perspective: 800px;
+            background: url("")
         }
         
         #card {
@@ -49,15 +50,21 @@
 <body>
     <div class="container">
         <div id="card">
-            <div class="front">앞면</div>
-            <div class="back">뒷면</div>
+            <img class="front" src="http://www.madore.org/~david/images/cards/english/king-hearts.png" alt="">
+            <img class="back" src="http://www.madore.org/~david/images/cards/english/queen-hearts.png" alt="">
         </div>
     </div>
+    <button class="btn">Click Me!</button>
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script>
         $(function() {
             $("#card").click(function() {
                 $(this).toggleClass("flipped");
+            });
+        });
+        $(function() {
+            $(".btn").on("click", function() {
+                $("#card").toggleClass("flipped")
             });
         });
     </script>
