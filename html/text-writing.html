@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>텍스트 애니메이션</title>
+    <style>
+        @keyframes keyframes {
+            0% {
+                width: 0;
+            }
+            /*100% {}*/
+        }
+        
+        .text {
+            overflow: hidden;
+            width: 30em;
+            animation: keyframes 5s steps(500) infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Text Writing Animation</h1>
+    <p class="text">커피를 너무 많이 마셨나봐요 심장이 막 두근대고 잠잘 수가 없어요</p>
+    <p class="text-box">커피박스</p>
+</body>
+
+</html>

@@ -1,5 +1,7 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+/*@import url('https://fonts.googleapis.com/css?family=Noto+Sans');*/
+
 
 /* 웹폰트 선언 */
 
@@ -56,8 +58,8 @@ html {
 
 body {
     background: white;
-    font-family: 'Noto Sans Regular', sans-serif;
-    font-family: "돋움", Dotum;
+    font-family: 'Noto Sans Regular';
+    /*font-family: "돋움", Dotum;*/
     font-size: 1.4rem;
 }
 
@@ -128,7 +130,7 @@ a {
     /*background: #007042;*/
     /* back to top 하고 싶다면 position: fixed;*/
     position: absolute;
-    top: 102px;
+    top: 101px;
     left: 30px;
 }
 
@@ -220,7 +222,7 @@ a {
 .main-menu>li>span:hover,
 .main-menu>li>span:focus {
     color: #007042;
-    /**/
+    /*탭으로 선택했을 때 점선 제거*/
     outline: 0;
     /* 박스에 밑줄 귿기 */
     /*border-bottom: 2px solid #181818;*/
@@ -295,9 +297,89 @@ a {
     right: 0px;
 }
 
+
+/* 비주얼 */
+
+@keyframes text-ani {
+    /*from {}
+    to {}*/
+    0% {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0);
+        /*이걸로 하면 absolute 안해도 됨*/
+        transform: translate(400px, 0px);
+    }
+    /*50% {
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        transform: translate(400px, 400px);
+    }*/
+    100% {
+        font-size: 30px;
+        color: rgba(0, 0, 0, 1);
+        transform: translate(350px, 200px);
+    }
+}
+
 .visual {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Bold';
     height: 120px;
+    position: relative;
+}
+
+@keyframes flower-ani {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.visual::before,
+.visual::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    animation: flower-ani 1s forwards 0s ease-in-out infinite alternate;
+}
+
+.visual::before {
+    background: url(images/ani_flower_01.png) no-repeat 0 -10px, url(images/ani_flower_02.png) no-repeat 670px 0;
+    /*background: yellow;*/
+    animation-delay: 1s;
+}
+
+.visual::after {
+    /*이미지 반복금지 : no-repeat*/
+    background: url(images/ani_flower_03.png) no-repeat 300px 0, url(images/ani_flower_04.png) no-repeat 800px 0;
+}
+
+.visual-text {
+    /*다른거에 영향 안주게*/
+    /*position: absolute;*/
+    display: inline-block;
+    /*background: #818181;*/
+    /*이름*/
+    /*animation-name: text-ani;*/
+    /*시간*/
+    /*animation-duration: 5s;*/
+    /*끝나고 정지 되돌아오는건 backwards*/
+    /*animation-fill-mode: forwards;*/
+    /*색*/
+    /*animation-delay: 2s;*/
+    color: rgba(0, 0, 0, 0);
+    /*무브먼트*/
+    /*animation-timing-function: ease-in-out;*/
+    /*3번 반복해라*/
+    /*animation-iteration-count: infinite;*/
+    /*왔다 갔다 왔다 갔다. 스윙 에니메이션*/
+    /*animation-direction: alternate;*/
+    /*animation-play-state 이거는 버튼 컨트롤 할 때 jquery를 이용해서*/
+    animation: text-ani 1s forwards 0s cubic-bezier(0, 0, 1, 0) infinite alternate;
 }
 
 .main-content {
